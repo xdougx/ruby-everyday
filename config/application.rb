@@ -17,17 +17,18 @@ Bundler.require(*Rails.groups)
 module RubyEveryday
   class Application < Rails::Application
     config.time_zone = 'Brasilia'
-    config.active_record.default_timezone = :local
 
     config.autoload_paths += Dir["#{config.root}/lib/**/**/**"]
 
-    config.i18n.default_locale = "pt-br"
+    config.i18n.default_locale = "en"
     config.filter_parameters += [:password]
 
     config.encoding = "utf-8"
 
     config.assets.enabled = true
-    config.serve_static_assets = true
+    config.serve_static_files = true
+
+    config.assets.precompile += %w( html5shiv.js )
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers

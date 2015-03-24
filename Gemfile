@@ -6,6 +6,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'bcrypt-ruby'
 gem 'awesome_print'
 gem 'mini_magick'
+gem 'exceptions-resource', github: 'xdougx/exceptions-resource'
 
 gem 'will_paginate'
 
@@ -29,6 +30,7 @@ gem 'httparty'
 # gem 'aws-sdk'
 # gem 'paperclip'
 gem 'carrierwave'
+gem 'carrierwave-mongoid', require: 'carrierwave/mongoid'
 
 group :production, :staging do
   gem 'unicorn'
@@ -36,12 +38,13 @@ group :production, :staging do
   gem 'json'
 end
 
+gem 'jquery-rails'
+
 # the assets
 group :assets do
   gem 'uglifier', '>= 1.3.0'
   gem 'sass-rails', '~> 5.0'
   gem 'coffee-rails', '~> 4.1.0'
-  gem 'jquery-rails'
 end
 
 group :development, :test do

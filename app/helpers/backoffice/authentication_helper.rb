@@ -1,0 +1,2 @@
+module Backoffice::AuthenticationHelper
+end
