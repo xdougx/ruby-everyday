@@ -7,8 +7,14 @@ class Article
   field :body
   field :permalink
   field :status
-  field :tags, type: Array
   field :cover
+  field :published_in
+  field :tags, type: Array
+
+  mount_uploader :cover, CoverUploader
+
+  belongs_to :category
+  belongs_to :user
 
   validates :subject, :introduction, :body, presence: true
   validate :has_one_tag
@@ -17,13 +23,27 @@ class Article
   after_create :build_permalink
 
   def self.build params
+    params[:tags] = params[:tags].split(", ")
     article = new params
+    article.cover = params[:cover]
 
     if article.valid?
       article.save
       article
     else
-      raise Excetions::Model.build(article)
+      raise Exceptions::Model.build(article)
+    end
+  end
+
+  def build_update params
+    params[:tags] = params[:tags].split(", ")
+    self.cover = params[:cover] if params.key?(:cover)
+    self.update_attributes(params)
+
+    if self.valid?
+      self
+    else
+      raise Exceptions::Model.build(self)
     end
   end
 
@@ -32,7 +52,15 @@ class Article
   end
 
   def build_permalink
-    self.update_attributes(permalink: "#{self.id}-#{self.subject.parameterize}")
+    self.update_attributes(permalink: "#{self.subject.parameterize}")
+  end
+
+  def publish!
+    self.update_attributes(published_in: Time.now, status: 'published')
+  end
+
+  def unpublish!
+    self.update_attributes(published_in: nil, status: 'draft')
   end
 
   def has_one_tag
@@ -42,5 +70,9 @@ class Article
   def update params
     self.update_attributes(params)
     Excetions::Model.build(article) unless self.valid?
+  end
+
+  def draft?
+    self.status =~ /draft/
   end
 end

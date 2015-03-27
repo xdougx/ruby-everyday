@@ -1,0 +1,81 @@
+<div class="row">
+  <div class="col-lg-12">
+  <h1 class="page-header">
+    Articles <small> Edit</small>
+  </h1>
+  <ol class="breadcrumb">
+    <li>
+      <i class="fa fa-dashboard"></i> <a href="/backoffice">Dashboard</a>
+    </li>
+    <li>
+      <i class="fa fa-newspaper-o"></i> <a href="/backoffice/articles">Articles</a>
+    </li>
+    <li class="active">
+      <i class="fa fa-newspaper-o"></i> New Article
+    </li>
+  </ol>
+  </div>
+</div>
+
+<% if @error %>
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="alert alert-warning alert-dismissable">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+        <i class="fa fa-exclamation-triangle"></i>  <span><%= @error[:error][:full_message] %></span>
+      </div>
+    </div>
+  </div>
+<% end %>
+
+<div class="row">
+  <div class="col-lg-12">
+    <%= form_tag "/backoffice/articles", role: 'form', multipart: true, method: :post do %>
+      
+      <div class="form-group">
+        <input type="text" id="article_subject" class="input_h2" name="article[subject]" placeholder="Article Subject">
+        <input type"text" id="article_permalink" class="input_small" name="article[permalink]" placeholder="Article permalink (automatic)">
+      </div>
+
+
+      <div class="form-group">
+        <label>Cover</label>
+        <input type="file" name="article[cover]">
+      </div>
+
+        <div class="form-group">
+        <label>Category</label>
+        <%= select_category %>
+          
+      </div>
+      
+      <div class="form-group">
+        <label for="article_introduction">Introduction</label>
+        <textarea id="article_introduction" name="article[introduction]">
+        </textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="article_body">Body</label>
+        <textarea id="article_body" name="article[body]">
+        </textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="article_tags">Tags</label>
+        <input type="text" id="article_tags" class="form-control" name="article[tags]" placeholder="Tag, Tag, Tag, Tag">
+      </div>
+
+      <input type="hidden" name="article[user_id]" value="">      
+
+      <div class="center">
+        <button class="btn btn-primary">Save</button>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+
+<%= content_for :javascript do %>
+  <%= javascript_include_tag 'backoffice/articles/show' %>
+<% end %>

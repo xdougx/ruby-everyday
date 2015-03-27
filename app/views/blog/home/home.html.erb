@@ -1,0 +1,23 @@
+<section class="row">
+  <div class="col-sm-9 col-md-9 col-lg-9">
+    <% @articles.each do |article| %>
+    <article class="just article">
+      <span class="date_box"><%= l article.published_in, format: "%B %d, %Y"%></span>
+      <h2 class="post"><%= article.subject %></h2>
+      <%= article.introduction.html_safe %>
+      <div class="right"><a href="/<%= article.category.url %>/<%= article.permalink %>">Learn more</a></div>
+    </article>
+    <% end %>
+  </div>
+  <div class="col-sm-3 col-md-3 col-lg-3">
+    <article class="just article">
+      <h4 class="aside">Categories</h4>
+      <ul>
+        <% Category.all.each do |category| %>
+        <li><a href="/<%= category.url %>"><%= category.title %> (<%= category.size %>)</a></li>
+        <% end %>
+      </ul>
+    </article>
+  </div>  
+</section>
+

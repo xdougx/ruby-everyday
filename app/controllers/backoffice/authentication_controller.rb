@@ -1,3 +1,2 @@
-class Backoffice::AuthenticationController < ApplicationController
-  
+class Backoffice::AuthenticationController < ApplicationController  
 end

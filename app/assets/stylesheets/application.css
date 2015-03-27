@@ -10,4 +10,96 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+ *= require bootstrap
+ *= require fontawesome
+ *= require_tree ./helpers
  */
+
+@import url(http://fonts.googleapis.com/css?family=Arvo:700|Source+Code+Pro|Roboto+Condensed:700,300,400);
+
+
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+  color: #777;
+  font-size: 16px;
+  /*font-weight: 300;*/
+}
+
+h1 {
+  font-family: 'Arvo', sans-serif;
+  font-weight: 700;
+}
+
+a {
+  color: #D74C5A;
+}
+
+a:hover {
+  color: #AE2A39;
+  text-decoration: none;
+}
+
+.inside_margeagle_tb {
+  padding: 20px 0;
+}
+
+.outside_margeagle_tb {
+  margin: 20px 0;
+}
+
+.block {
+  display: block;
+}
+
+#header {
+  margin: 50px 0 50px 0;
+  display: inline-block;
+  width: 100%;
+  text-transform: uppercase;
+}
+
+#division {
+  margin-bottom: 50px;
+  hr {
+    border-top: 1px solid #CCC;
+  }
+}
+
+#division-top {
+  margin-top: 50px;
+  hr {
+    border-top: 1px solid #CCC;
+  }
+}
+
+.article {
+  margin-bottom: 25px;
+  padding-bottom: 25px;
+  border-bottom: solid 1px #DFDFDF;  
+}
+
+.date_box {
+  display: inline-block;
+  font-size: 0.85em;
+  letter-spacing: 2px;
+  padding: 0.25em 1em 0.25em 1em;
+  background: #EE8F8A;
+  color: #fff;
+  font-weight: 400;
+  text-transform: uppercase;
+  border-radius: 4px;
+  border: 0;
+  box-shadow: 0.125em 0.175em 0 0 rgba(0,0,0,0.125);
+}
+
+.small_date_box {
+  display: inline-block;
+  font-size: 0.75em;
+  letter-spacing: 2px;
+  padding: 0.125em 0em;
+  color: #EE8F8A;
+  font-weight: 400;
+  text-transform: uppercase;
+
+  border: 0;
+}

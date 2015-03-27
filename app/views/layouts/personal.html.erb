@@ -1,0 +1,47 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <title>Douglas Rossignolli - Resume - Ruby Everyday</title>
+    <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="The Ruby-Everyday is a blog that contans articles, papers, posts about programing with ruby language, javascript and HTML">
+    <meta name="author" content="Douglas Rossignolli">
+    <meta name="description" content="" />
+    <meta name="keywords" content="ruby programing javascript html css api" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+    <%= csrf_meta_tags %>
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5187f3513b511b48" async="async"></script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <nav id="nav" class="row">
+          <ul>
+            <li><a href="/"><i class="fa fa-home icon"></i> <span>Home</span></a></li>
+            <li><a href="/the-author"><i class="fa fa-user icon"></i> <span>The Author</span></a></li>
+          </ul>
+        </nav>
+
+        <nav id="nav_social" class="row">
+          <ul>
+            <li><a target="_blank" href="http://facebook.com/xdougsx"><i class="fa fa-facebook icon"></i> <span>facebook.com/xdougsx</span></a></li>
+            <li><a target="_blank" href="http://twitter.com/xdougx"><i class="fa fa-twitter icon"></i> <span>@NinjaRuby</span></a></li>
+            <li><a target="_blank" href="http://linkedin.com/in/douglasrossignolli"><i class="fa fa-linkedin icon"></i> <span>douglasrossignolli</span></a></li>
+          </ul>
+          <!-- Go to www.addthis.com/dashboard to customize your tools -->
+        </nav>
+      </header>
+
+      <div><%= yield %></div>
+
+    </div>
+    
+  </body>
+</html>

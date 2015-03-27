@@ -6,7 +6,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'bcrypt-ruby'
 gem 'awesome_print'
 gem 'mini_magick'
-gem 'exceptions-resource', github: 'xdougx/exceptions-resource'
+gem 'exceptions-resource', github: 'xdougx/exceptions-resource', require: 'exceptions'
 
 gem 'will_paginate'
 
@@ -72,6 +72,14 @@ group :test do
   gem 'shoulda-matchers'
   gem 'capybara'
   gem 'database_cleaner', github: 'bmabey/database_cleaner'
+end
+
+source 'https://rails-assets.org' do
+  gem 'rails-assets-bootstrap'
+  gem 'rails-assets-jquery-flot'
+  gem 'rails-assets-morrisjs'
+  gem 'rails-assets-raphael'
+  gem 'rails-assets-fontawesome'
 end
 
 

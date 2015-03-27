@@ -1,0 +1,36 @@
+.btn-keep {
+  color: #fff;
+  background-color: #C76154;
+}
+
+.btn-draft {
+  color: #fff;
+  background-color: #909090;
+  &:hover {
+    color: #fff;
+    background-color: #ADADAD;
+  }
+}
+
+.btn-published {
+  color: #fff;
+  background-color: #5CB858;
+}
+
+.btn-publish {
+  color: #fff;
+  background-color: #247F00;
+  &:hover {
+    color: #fff;
+    background-color: #2FA700;
+  }
+}
+
+.btn-unpublish {
+  color: #fff;
+  background-color: #DC7C15;
+  &:hover {
+    color: #fff;
+    background-color: #39CA00
+  }
+}

@@ -1,0 +1,40 @@
+<section class="row">
+  <article class="just article">
+    <p class="center"><%= l @article.created_at, format: "São Paulo, %A, %B %d, %Y" %></p>
+    <p>Wrote by <%= @article.user.name %></p>
+    <h2 class="post"><%= @article.subject %></h2>
+    <div class="inside_margeagle_tb addthis_native_toolbox"></div>
+    <div>
+      <% if @article.cover.present? %>
+      <picture class="outside_margeagle_tb block">
+        <%= image_tag @article.cover.url %>
+      </picture>
+      <% end %> 
+         
+      <%= @article.introduction.html_safe %>
+      <%= @article.body.html_safe %>
+    </div>
+    <div>
+      <p><strong>Tags:</strong> <%= @article.tags.join(", ")%></p>
+    </div>
+  </article>
+  <div>
+    <div id="disqus_thread"></div>
+      <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES * * */
+        var disqus_shortname = 'ruby-everyday';
+        var disqus_identifier = '<%= @article.id%>';
+        
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+      </script>
+      <noscript>
+        Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+      </noscript>
+    </div>
+  </script>
+</section>
+
