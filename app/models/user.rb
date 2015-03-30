@@ -48,4 +48,8 @@ class User
     self.errors.add :frase, I18n.t("errors.messages.greater_than_or_equal_to", 20) if @frase.size < 20
   end
 
+  def authenticate frase
+    self if self.frase == frase
+  end
+
 end

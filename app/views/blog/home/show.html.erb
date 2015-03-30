@@ -18,6 +18,20 @@
       <p><strong>Tags:</strong> <%= @article.tags.join(", ")%></p>
     </div>
   </article>
+</section>
+
+<section class="row">
+  <article class="col-sm-12 col-md-12 col-lg-12" id="more_articles">
+    <h3>See more Articles</h3>
+    <% @keep_read.each do |article| %>
+    <div class="col-sm-3 col-md-3 col-lg-3">
+      <h5><%= article.subject %></h5>  
+    </div>
+    <% end %>
+  </article>
+</section>
+
+<section class="row">
   <div>
     <div id="disqus_thread"></div>
       <script type="text/javascript">

@@ -8,7 +8,7 @@ gem 'awesome_print'
 gem 'mini_magick'
 gem 'exceptions-resource', github: 'xdougx/exceptions-resource', require: 'exceptions'
 
-gem 'will_paginate'
+gem 'will_paginate_mongoid'
 
 gem 'pdfkit'
 gem 'wicked_pdf'

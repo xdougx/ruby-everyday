@@ -1,14 +1,13 @@
 Rails.application.routes.draw do
   root "blog/home#home"
-  get "/:category/:id" => "blog/home#show"
-  get "the-author" => "blog/home#author"
 
   scope "backoffice", module: "backoffice", as: "backoffice" do  
     root "home#home"
 
-    namespace "auth" do
-      get "login" => "authentication#sign_in" 
-      post "authenticate" => "authentication#authenticate" 
+    namespace "authentication" do
+      get "sign_in"
+      get "sign_out"
+      post "authenticate"
     end
 
     resources :articles do
@@ -24,4 +23,6 @@ Rails.application.routes.draw do
     resources :users do
     end
   end
+  get "/:category/:id" => "blog/home#show"
+  get "the-author" => "blog/home#author"
 end

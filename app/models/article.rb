@@ -35,6 +35,10 @@ class Article
     end
   end
 
+  def self.published
+    where(status: 'published')
+  end
+
   def build_update params
     params[:tags] = params[:tags].split(", ")
     self.cover = params[:cover] if params.key?(:cover)
