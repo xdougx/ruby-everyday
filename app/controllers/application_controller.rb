@@ -8,6 +8,13 @@ class ApplicationController < ActionController::Base
     loged_in?
   end
 
+
+  rescue_from Exception do |exception|
+    Rails.logger.info exception.message
+    Rails.logger.info exception.backtrace.join("\n\r")
+    render file: "./public/500.html"
+  end
+
   def loged_in?
     return if request.url["/backoffice"].blank?
 
