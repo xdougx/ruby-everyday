@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.0'
 gem 'mongoid' 
 gem 'jbuilder', '~> 2.0'
-gem 'bcrypt-ruby'
+gem 'bcrypt'
 gem 'awesome_print'
 gem 'mini_magick'
 gem 'exceptions-resource', github: 'xdougx/exceptions-resource', require: 'exceptions'
@@ -77,7 +77,6 @@ end
 source 'https://rails-assets.org' do
   gem 'rails-assets-bootstrap'
   gem 'rails-assets-jquery-flot'
-  gem 'rails-assets-morrisjs'
   gem 'rails-assets-raphael'
   gem 'rails-assets-fontawesome'
 end

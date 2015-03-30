@@ -14,5 +14,4 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require raphael
-//= require morrisjs
 //= require_tree ./utils

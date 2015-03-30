@@ -12,7 +12,6 @@
  *
  *= require bootstrap
  *= require sb-admin.css
- *= require morrisjs
  *= require fontawesome
  *= require_tree ./utils
  *= require_tree ./helpers
