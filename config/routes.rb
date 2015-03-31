@@ -23,7 +23,7 @@ Rails.application.routes.draw do
     resources :users do
     end
   end
+  get "the-author" => "blog/home#author"
   get "/:category/:id" => "blog/home#show"
   get "/:category" => "blog/home#category"
-  get "the-author" => "blog/home#author"
 end
