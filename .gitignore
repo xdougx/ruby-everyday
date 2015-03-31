@@ -13,3 +13,5 @@
 /tmp
 
 *.json
+
+config/secrets.yml

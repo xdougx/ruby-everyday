@@ -2,7 +2,7 @@ ROOT = "/home/xshirowx/apps/ruby_everyday/current"
 
 working_directory ROOT
 preload_app true
-pid "#{ROOT}/tmp/pids/unicorn.pid"
+pid "#{ROOT}/tmp/pids/ruby_everyday.pid"
 stderr_path "#{ROOT}/log/unicorn.log"
 stdout_path "#{ROOT}/log/unicorn.log"
 
