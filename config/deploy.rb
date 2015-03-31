@@ -37,6 +37,7 @@ namespace :deploy do
     sudo "chmod a+x /home/#{user}/apps/#{application}/current/config/unicorn_init.sh"
     sudo "ln -nfs #{current_path}/config/nginx.conf /etc/nginx/sites-enabled/#{application}"
     sudo "ln -nfs #{current_path}/config/unicorn_init.sh /etc/init.d/unicorn_#{application}"
+    sudo "ln -nfs #{current_path}/config/.env /home/#{user}/apps/#{application}/current/.env"
     run "mkdir -p #{shared_path}/config"
     put File.read("config/mondoid.yml"), "#{shared_path}/config/mongoid.yml"
     puts "Now edit the config files in #{shared_path}."

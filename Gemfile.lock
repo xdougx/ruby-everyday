@@ -189,6 +189,9 @@ GEM
     descendants_tracker (0.0.4)
       thread_safe (~> 0.3, >= 0.3.1)
     diff-lcs (1.2.5)
+    dotenv (0.11.1)
+      dotenv-deployment (~> 0.0.2)
+    dotenv-deployment (0.0.2)
     equalizer (0.0.9)
     erubis (2.7.0)
     eventmachine (1.0.7)
@@ -442,6 +445,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   cpf_faker
   database_cleaner!
+  dotenv
   exceptions-resource!
   factory_girl_rails (~> 4.0)
   faker
