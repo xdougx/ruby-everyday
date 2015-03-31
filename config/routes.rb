@@ -24,5 +24,6 @@ Rails.application.routes.draw do
     end
   end
   get "/:category/:id" => "blog/home#show"
+  get "/:category" => "blog/home#category"
   get "the-author" => "blog/home#author"
 end
