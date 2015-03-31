@@ -79,4 +79,9 @@ class Article
   def draft?
     self.status =~ /draft/
   end
+
+  def to_url
+    "#{self.category.url}/#{self.permalink}"
+  end
+  
 end

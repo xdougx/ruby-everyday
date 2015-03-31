@@ -20,16 +20,18 @@
   </article>
 </section>
 
+<% if @keep_read.size > 0 %>
 <section class="row">
   <article class="col-sm-12 col-md-12 col-lg-12" id="more_articles">
     <h3>See more Articles</h3>
     <% @keep_read.each do |article| %>
     <div class="col-sm-3 col-md-3 col-lg-3">
-      <h5><%= article.subject %></h5>  
+      <h5><a href="/<%= article.to_url %>"><%= article.subject %></a></h5>  
     </div>
     <% end %>
   </article>
 </section>
+<% end %>
 
 <section class="row">
   <div>
