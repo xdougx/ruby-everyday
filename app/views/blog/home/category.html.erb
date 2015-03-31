@@ -3,7 +3,7 @@
   <hr>
   <% @articles.each do |article| %>
   <article class="just article">
-    <h4 class="category"><%= l article.created_at, format: "%d-%m-%Y" %> | <%= article.subject %> </h4>
+    <h4 class="category"><a href="/<%= @category.url %>/<%= article.permalink %>"><%= l article.created_at, format: "%d-%m-%Y" %> | <%= article.subject %></a> </h4>
     <p><%= sanitize article.introduction[0..100], tags: %w{} %>...</p>
     <p><small><strong>Tags:</strong> <%= article.tags.join(", ")%></small></p>
   </article>
