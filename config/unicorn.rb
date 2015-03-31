@@ -1,6 +1,14 @@
+ROOT = "/home/xshirowx/apps/ruby_everyday/current"
+
+working_directory ROOT
 preload_app true
+pid "#{ROOT}/tmp/pids/unicorn.pid"
+stderr_path "#{ROOT}/log/unicorn.log"
+stdout_path "#{ROOT}/log/unicorn.log"
+
+listen "/tmp/unicorn.ruby_everyday.sock"
 worker_processes 3
-timeout 30
+timeout 15
 
 # Force the bundler gemfile environment variable to 
 # reference the capistrano "current" symlink
@@ -17,4 +25,4 @@ before_fork do |server, worker|
 
   defined?(ActiveRecord::Base) and
     ActiveRecord::Base.connection.disconnect!
-end  
+end

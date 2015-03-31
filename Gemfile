@@ -26,6 +26,12 @@ gem 'httparty'
 # gem 'resque-scheduler', require: 'resque-scheduler'
 # gem 'resque-web', :require => 'resque_web'
 
+# deploy
+gem 'capistrano', '~> 2.15.5'
+gem 'rvm-capistrano'
+gem "capistrano-resque", "~> 0.1.0", require: false
+gem 'net-ssh', '2.7.0'
+
 # file upload
 # gem 'aws-sdk'
 # gem 'paperclip'
