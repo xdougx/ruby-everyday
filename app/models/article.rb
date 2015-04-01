@@ -22,7 +22,7 @@ class Article
   before_create :init
   after_create :build_permalink
 
-  def self.build params
+  def self.build params, current_user
     params[:tags] = params[:tags].split(", ")
     article = new params
     article.cover = params[:cover]

@@ -19,7 +19,7 @@ class Backoffice::ArticlesController < ApplicationController
 
   def create
     begin
-      Article.build(article_params)
+      Article.build(article_params, current_user)
       redirect_to backoffice_articles_path
     rescue => exception
       @error = exception.error
