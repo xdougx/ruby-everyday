@@ -4,6 +4,11 @@ class Blog::HomeController < ApplicationController
   def home
     @title = "Ruby Everyday"
     @articles = Article.published.paginate(page: page)
+
+    respond_to do |format|
+      format.html
+      format.rss { render layout: false }
+    end
   end
 
   def show
@@ -13,7 +18,6 @@ class Blog::HomeController < ApplicationController
   end
 
   def author
-    @title = "About the Author - Ruby Everyday"
     render action: :author, layout: 'personal'
   end
 

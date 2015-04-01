@@ -86,4 +86,8 @@ class Article
     "#{self.category.url}/#{self.permalink}"
   end
 
+  def to_full_url
+    "http://ruby-everyday.ninja/#{self.to_url}"
+  end
+
 end
