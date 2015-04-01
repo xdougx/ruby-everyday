@@ -36,7 +36,7 @@ class Article
   end
 
   def self.published
-    where(status: 'published')
+    where(status: 'published').order('created_at DESC')
   end
 
   def build_update params
@@ -83,5 +83,5 @@ class Article
   def to_url
     "#{self.category.url}/#{self.permalink}"
   end
-  
+
 end
