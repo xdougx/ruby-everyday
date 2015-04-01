@@ -26,6 +26,7 @@ class Article
     params[:tags] = params[:tags].split(", ")
     article = new params
     article.cover = params[:cover]
+    article.user = current_user
 
     if article.valid?
       article.save
