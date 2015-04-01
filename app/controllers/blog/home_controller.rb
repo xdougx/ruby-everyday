@@ -7,7 +7,7 @@ class Blog::HomeController < ApplicationController
 
     respond_to do |format|
       format.html
-      format.xml { redirect_to feed_path, :status => :moved_permanently }
+      format.rss { redirect_to feed_path, :status => :moved_permanently }
     end
   end
 
