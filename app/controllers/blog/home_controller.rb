@@ -7,7 +7,16 @@ class Blog::HomeController < ApplicationController
 
     respond_to do |format|
       format.html
-      format.rss { render layout: false }
+      format.xml { redirect_to feed_path, :status => :moved_permanently }
+    end
+  end
+
+  def feed
+    @title = "Ruby Everyday"
+    @articles = Article.published.paginate(page: page)
+
+    respond_to do |format|
+      format.rss { render(layout: false) }
     end
   end
 
