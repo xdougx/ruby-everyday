@@ -58,7 +58,7 @@ class Backoffice::ArticlesController < ApplicationController
   private
 
   def article_params
-    params.require(:article).permit(:subject, :introduction, :body, :permalink, :status, :cover, :published_in, :tags, :category_id)
+    params.require(:article).permit(:subject, :introduction, :body, :permalink, :status, :cover, :published_in, :tags, :category_id, :lang_id)
   end
 end
 
