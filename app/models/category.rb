@@ -35,7 +35,7 @@ class Category
 
   def self.read_more article
     size = article.category.articles.size
-    article.category.articles.skip.nin(id: [article.id]).limit(4)
+    article.category.articles.published.skip.nin(id: [article.id]).limit(4)
   end
 
 end

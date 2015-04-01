@@ -13,13 +13,14 @@ class Blog::HomeController < ApplicationController
   end
 
   def author
+    @title = "#{@article.subject} - Ruby Everyday"
     render action: :author, layout: 'personal'
   end
 
   def category
     @category = Category.find_by(url: params[:category])
     @title = "#{@category.title} - Ruby Everyday"
-    @articles = @category.articles
+    @articles = @category.articles.published
   end
 
   private
