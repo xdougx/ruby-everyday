@@ -12,7 +12,7 @@ xml.rss :version => "2.0" do
       xml.item do
         xml.title article.subject
         xml.author article.user.name
-        xml.pubDate article.pushibled_in.to_s(:rfc822)
+        xml.pubDate article.published_in.to_s(:rfc822)
         xml.link article.to_full_url
         xml.guid article.id
         xml.description(article.introduction + article.body)
