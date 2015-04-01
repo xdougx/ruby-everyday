@@ -13,7 +13,7 @@ class Blog::HomeController < ApplicationController
   end
 
   def author
-    @title = "#{@article.subject} - Ruby Everyday"
+    @title = "About the Author - Ruby Everyday"
     render action: :author, layout: 'personal'
   end
 
