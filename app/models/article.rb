@@ -15,6 +15,7 @@ class Article
 
   belongs_to :category
   belongs_to :user
+  belongs_to :lang
 
   validates :subject, :introduction, :body, presence: true
   validate :has_one_tag
@@ -57,7 +58,7 @@ class Article
   end
 
   def build_permalink
-    self.update_attributes(permalink: "#{self.subject.parameterize}")
+    self.update_attributes(permalink: "#{self.subject.parameterize}") if self.permalink.blank?
   end
 
   def publish!

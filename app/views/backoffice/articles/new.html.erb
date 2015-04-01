@@ -37,18 +37,22 @@
         <input type"text" id="article_permalink" class="input_small" name="article[permalink]" placeholder="Article permalink (automatic)">
       </div>
 
-
       <div class="form-group">
-        <label>Cover</label>
-        <input type="file" name="article[cover]">
+       <label>Lang</label>
+        <%= select_lang %>
       </div>
 
-        <div class="form-group">
+      <div class="form-group">
         <label>Category</label>
         <%= select_category %>
           
       </div>
       
+      <div class="form-group">
+        <label>Cover</label>
+        <input type="file" name="article[cover]">
+      </div>
+
       <div class="form-group">
         <label for="article_introduction">Introduction</label>
         <textarea id="article_introduction" name="article[introduction]">

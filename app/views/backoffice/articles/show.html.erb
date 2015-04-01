@@ -39,6 +39,16 @@
       </div>
 
       <div class="form-group">
+       <label>Language</label>
+        <%= select_lang(@article.lang.id.to_s) %>
+      </div>
+
+      <div class="form-group">
+       <label>Category</label>
+        <%= select_category(@article.category.id.to_s) %>
+      </div>
+
+      <div class="form-group">
         <label>Cover</label>
         <input type="file" name="article[cover]">
           <picture class="outside_margeagle_tb block">

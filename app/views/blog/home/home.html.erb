@@ -3,7 +3,7 @@
     <% @articles.each do |article| %>
     <article class="just article">
       <span class="date_box"><%= l article.published_in, format: "%B %d, %Y"%></span>
-      <h2 class="post"><a href="/<%= article.to_url %>"><%= article.subject %></a></h2>
+      <h2 class="post"><a href="/<%= article.to_url %>">[<%= article.lang.symbol %>] <%= article.subject %></a></h2>
       <%= article.introduction.html_safe %>
       <div class="right"><a href="/<%= article.to_url %>">Learn more</a></div>
     </article>
