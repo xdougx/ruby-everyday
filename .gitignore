@@ -15,3 +15,5 @@
 *.json
 
 config/secrets.yml
+config/deploy.rb
+config/deploy/*
