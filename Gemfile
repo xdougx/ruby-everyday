@@ -12,6 +12,8 @@ gem 'will_paginate_mongoid'
 
 gem 'pdfkit'
 gem 'wicked_pdf'
+gem 'redcarpet'
+gem 'rouge', github: 'jneen/rouge'
 
 # integrations
 gem 'httparty'

@@ -26,4 +26,9 @@ class ApplicationController < ActionController::Base
   def current_user
     User.find(session[:user])
   end
+
+  def red_carpet options = {} 
+    Redcarpet::Render::HTML.new(options)
+  end
+
 end

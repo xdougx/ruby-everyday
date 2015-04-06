@@ -11,6 +11,12 @@ GIT
     wkhtmltopdf-heroku (0.2.0)
 
 GIT
+  remote: git://github.com/jneen/rouge.git
+  revision: a6027653c0bc63b845dfbd5b19fc0d73e3ae066a
+  specs:
+    rouge (1.8.0)
+
+GIT
   remote: git://github.com/rspec/rspec-core.git
   revision: b6d9a8e3ca06a9f94bf3de49e05fdd3f43eba638
   branch: master
@@ -315,6 +321,7 @@ GEM
     rainbow (2.0.0)
     raindrops (0.13.0)
     rake (10.4.2)
+    redcarpet (3.2.2)
     redis (3.2.1)
     redis-namespace (1.5.1)
       redis (~> 3.0, >= 3.0.4)
@@ -460,6 +467,8 @@ DEPENDENCIES
   rails-assets-jquery-flot!
   rails-assets-raphael!
   rails-erd
+  redcarpet
+  rouge!
   rspec-core!
   rspec-expectations!
   rspec-its!

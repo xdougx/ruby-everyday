@@ -4,8 +4,8 @@ class ArticleShow
     publish()
 
   init = () ->
-    $("#article_introduction").redactor()
-    $("#article_body").redactor()
+    # $("#article_introduction").redactor()
+    # $("#article_body").redactor()
 
   publish = () ->
     $("#publish_article").on 'click', ->
