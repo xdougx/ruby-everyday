@@ -202,6 +202,8 @@ GEM
     flog (4.3.2)
       ruby_parser (~> 3.1, > 3.1.0)
       sexp_processor (~> 4.4)
+    font-awesome-rails (4.3.0.0)
+      railties (>= 3.2, < 5.0)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
     haml (4.0.7)
@@ -248,7 +250,6 @@ GEM
       mini_portile2 (~> 2.0.0.rc2)
     parser (2.3.0.6)
       ast (~> 2.2)
-    pdfkit (0.8.2)
     pg (0.18.4)
     powerpack (0.1.1)
     rack (1.6.4)
@@ -269,7 +270,6 @@ GEM
       sprockets-rails
     rails-assets-bootstrap (3.3.6)
       rails-assets-jquery (>= 1.9.1, < 3)
-    rails-assets-fontawesome (4.5.0)
     rails-assets-jquery (2.2.2)
     rails-deprecated_sanitizer (1.0.3)
       activesupport (>= 4.2.0.alpha)
@@ -394,7 +394,6 @@ GEM
       binding_of_caller (>= 0.7.2)
       railties (>= 4.0)
       sprockets-rails (>= 2.0, < 4.0)
-    wicked_pdf (1.0.4)
     wkhtmltopdf-binary (0.9.9.3)
     xpath (2.0.0)
       nokogiri (~> 1.3)
@@ -417,6 +416,7 @@ DEPENDENCIES
   exceptions-resource!
   factory_girl_rails (~> 4.0)
   faker
+  font-awesome-rails (= 4.3.0.0)
   httparty
   jbuilder (~> 2.0)
   jquery-rails
@@ -424,11 +424,9 @@ DEPENDENCIES
   mini_magick
   mocha
   net-ssh (= 2.7.0)
-  pdfkit
   pg
   rails (= 4.2.5)
   rails-assets-bootstrap!
-  rails-assets-fontawesome!
   rails-erd
   redcarpet
   rouge!
@@ -448,7 +446,6 @@ DEPENDENCIES
   uglifier (>= 1.3.0)
   unicorn
   web-console (~> 2.0)
-  wicked_pdf
   wkhtmltopdf-binary (>= 0.9.9.1)
   wkhtmltopdf-heroku!
 

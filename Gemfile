@@ -72,8 +72,9 @@ group :test do
   gem 'database_cleaner', github: 'bmabey/database_cleaner'
 end
 
+gem 'font-awesome-rails', '4.3.0.0'
+
 source 'https://rails-assets.org' do
   gem 'rails-assets-bootstrap'
-  gem 'rails-assets-fontawesome'
 end
 
