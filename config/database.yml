@@ -59,10 +59,3 @@ test:
   <<: *default
   database: ruby_everyday_test
 
-
-production:
-  <<: *default
-  host: shyre.c2qkdhiceots.us-east-1.rds.amazonaws.com
-  database: shyre
-  username: shyre
-  password: '!$hyreB4$e2016#'
